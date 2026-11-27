@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-CN" data-composition-variables='[{"id": "brand", "type": "string", "label": "频道名称", "default": "小玄子"}, {"id": "opening", "type": "string", "label": "开场文字", "default": "从一个想法"}, {"id": "subtitle", "type": "string", "label": "开场说明", "default": "零基础也能开始"}, {"id": "hero1", "type": "string", "label": "主题第一行", "default": "用 AI"}, {"id": "hero2", "type": "string", "label": "主题第二行", "default": "做点真东西"}, {"id": "tagline", "type": "string", "label": "定格标语", "default": "用 AI 做点真东西"}, {"id": "categories", "type": "string", "label": "内容方向", "default": "内容 · 产品 · 实战记录"}, {"id": "accent", "type": "color", "label": "强调色", "default": "#ca482b"}]'>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=1920,height=1080">
+<title>小玄子｜十秒中文片头</title><script src="assets/lib/gsap.min.js"></script>
+<style>@font-face{font-family:'片头黑体';font-style:normal;font-weight:400;font-display:block;src:url('assets/fonts/noto-sans-sc-400.woff2') format('woff2')}@font-face{font-family:'片头黑体';font-style:normal;font-weight:700;font-display:block;src:url('assets/fonts/noto-sans-sc-700.woff2') format('woff2')}@font-face{font-family:'片头黑体';font-style:normal;font-weight:900;font-display:block;src:url('assets/fonts/noto-sans-sc-900.woff2') format('woff2')}
+*{box-sizing:border-box;margin:0;padding:0}html,body{width:1920px;height:1080px;overflow:hidden;background:#f6f3eb}
+:root{--accent:#ca482b;--ground:#f6f3eb;--ink:#142b25;--font-display:'片头黑体'}
+#root{position:relative;width:1920px;height:1080px;font-family:'片头黑体';background:#f6f3eb}
+.clip{position:absolute;inset:0;width:100%;height:100%}
+</style></head><body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="10" data-fps="30" data-width="1920" data-height="1080">
+<div id="spark" class="clip" data-composition-id="spark" data-composition-src="compositions/spark.html" data-start="0" data-duration="2.8" data-track-index="0" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+<div id="make" class="clip" data-composition-id="make" data-composition-src="compositions/make.html" data-start="2.8" data-duration="3.8" data-track-index="0" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+<div id="close" class="clip" data-composition-id="close" data-composition-src="compositions/close.html" data-start="6.6" data-duration="3.4" data-track-index="0" data-track-kind="graphics" data-width="1920" data-height="1080"></div>
+</div><script>window.__timelines=window.__timelines||{};const main=gsap.timeline({paused:true});main.to({}, {duration:10});window.__timelines["main"]=main;</script>
+</body></html>

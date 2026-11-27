@@ -1,0 +1,20 @@
+{
+  "duration": 10,
+  "assertions": [
+    {
+      "kind": "appearsBy",
+      "selector": "#spark-heading",
+      "bySec": 0.8
+    },
+    {
+      "kind": "appearsBy",
+      "selector": "#make-line2",
+      "bySec": 4.2
+    },
+    {
+      "kind": "appearsBy",
+      "selector": "#close-tagline",
+      "bySec": 7.8
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"></head><body><template>
+<style>
+#root{position:absolute;inset:0;background:#f6f3eb;color:#142b25;font-family:'片头黑体'}
+#spark-label{position:absolute;left:200px;top:134px;font-size:38px;font-weight:700;line-height:1.5;letter-spacing:3px}
+#spark-rule{position:absolute;left:200px;top:230px;width:1520px;height:2px;background:#b4bdb4;transform-origin:left}
+#spark-heading{position:absolute;left:200px;top:360px;font-size:150px;font-weight:900;line-height:1.4;letter-spacing:-4px;white-space:nowrap}
+#spark-sub{position:absolute;left:212px;top:617px;font-size:44px;font-weight:400;line-height:1.5}
+#spark-line{position:absolute;left:214px;top:575px;width:286px;height:14px;background:var(--accent,#ca482b);transform-origin:left}
+#spark-symbol{position:absolute;left:1430px;top:398px;width:220px;height:220px}
+.spark-tile{border-radius:50%;position:absolute;width:100px;height:100px;background:var(--accent,#ca482b)}
+#spark-a{left:0;top:0}#spark-b{left:116px;top:0}#spark-c{left:0;top:116px}#spark-d{left:116px;top:116px}
+</style><div id="root" data-composition-id="spark" data-duration="2.8">
+<div id="spark-all" class="clip" data-start="0" data-duration="2.8" data-track-index="0">
+<p id="spark-label" data-var-text="brand">小玄子</p><div id="spark-rule" data-layout-ignore></div>
+<h1 id="spark-heading" data-var-text="opening">从一个想法</h1>
+<div id="spark-line" data-layout-ignore></div><p id="spark-sub" data-var-text="subtitle">零基础也能开始</p>
+<div id="spark-symbol" data-layout-ignore><i id="spark-a" class="spark-tile"></i><i id="spark-b" class="spark-tile"></i><i id="spark-c" class="spark-tile"></i><i id="spark-d" class="spark-tile"></i></div>
+</div></div><script>
+const tl=gsap.timeline({paused:true});
+tl.fromTo("#spark-heading",{opacity:0,x:-38},{opacity:1,x:0,duration:0.65,ease:"power4.out"},0.12);
+tl.fromTo("#spark-line",{scaleX:0},{scaleX:1,duration:0.5,ease:"expo.out"},0.7);
+tl.fromTo("#spark-sub",{opacity:0},{opacity:1,duration:0.4,ease:"power2.out"},0.72);
+tl.fromTo("#spark-a",{x:-62,y:-62,rotation:-22,opacity:0},{x:0,y:0,rotation:0,opacity:1,duration:0.7,ease:"power4.out"},0.18);
+tl.fromTo("#spark-b",{x:62,y:-62,rotation:22,opacity:0},{x:0,y:0,rotation:0,opacity:1,duration:0.7,ease:"power4.out"},0.32);
+tl.fromTo("#spark-c",{x:-62,y:62,rotation:22,opacity:0},{x:0,y:0,rotation:0,opacity:1,duration:0.7,ease:"power4.out"},0.46);
+tl.fromTo("#spark-d",{x:62,y:62,rotation:-22,opacity:0},{x:0,y:0,rotation:0,opacity:1,duration:0.7,ease:"power4.out"},0.6);
+tl.fromTo("#spark-symbol",{rotation:0},{rotation:90,duration:0.75,ease:"power3.inOut"},1.65);
+tl.to("#spark-heading",{opacity:0,x:-28,duration:0.24,ease:"power3.in"},2.53);
+tl.to("#spark-sub",{opacity:0,duration:0.2},2.53);
+window.__timelines=window.__timelines||{};window.__timelines["spark"]=tl;
+</script></template></body></html>
