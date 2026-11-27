@@ -1,0 +1,6 @@
+.hyperframes/
+renders/
+node_modules/
+验证记录/
+*.log
+.thumbnails/

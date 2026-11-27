@@ -1,0 +1,24 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"></head><body><template>
+<style>
+#root{position:absolute;inset:0;background:#f6f3eb;color:#142b25;font-family:'片头黑体'}
+#close-wordmark{position:absolute;left:340px;top:292px;width:1240px;text-align:center;font-size:210px;line-height:1.4;font-weight:900;letter-spacing:-8px;white-space:nowrap}
+#close-name{display:inline-block}#close-period{display:inline-block;margin-left:10px;color:var(--accent,#ca482b)}
+#close-tagline{position:absolute;left:300px;top:630px;width:1320px;text-align:center;font-size:62px;line-height:1.5;font-weight:700}
+#close-categories{position:absolute;left:300px;top:773px;width:1320px;text-align:center;font-size:38px;line-height:1.5;font-weight:400}
+#close-rule{position:absolute;left:780px;top:591px;width:360px;height:10px;background:var(--accent,#ca482b);transform-origin:center}
+</style><div id="root" data-composition-id="close" data-duration="3.4">
+<div id="close-all" class="clip" data-start="0" data-duration="3.4" data-track-index="0" data-hold>
+<h1 id="close-wordmark"><span id="close-name" data-var-text="brand">小玄子</span><span id="close-period" data-layout-ignore>·</span></h1>
+<div id="close-rule" data-layout-ignore></div>
+<p id="close-tagline" data-var-text="tagline">用 AI 做点真东西</p>
+<p id="close-categories" data-var-text="categories">内容 · 产品 · 实战记录</p>
+</div></div><script>
+// 根据官方 logo-brand-close 的标识落位、强调点和静止定格结构改编；保留实际文字以便编辑。
+const tl=gsap.timeline({paused:true});
+tl.fromTo("#close-name",{opacity:0,y:42,scale:1.035},{opacity:1,y:0,scale:1,duration:0.8,ease:"expo.out"},0.04);
+tl.fromTo("#close-period",{opacity:0,scale:0.2},{opacity:1,scale:1,duration:0.45,ease:"back.out(1.4)"},0.44);
+tl.fromTo("#close-rule",{scaleX:0},{scaleX:1,duration:0.55,ease:"power3.out"},0.5);
+tl.fromTo("#close-tagline",{opacity:0,y:16},{opacity:1,y:0,duration:0.55,ease:"power3.out"},0.5);
+tl.fromTo("#close-categories",{opacity:0},{opacity:1,duration:0.4,ease:"power2.out"},0.7);
+window.__timelines=window.__timelines||{};window.__timelines["close"]=tl;
+</script></template></body></html>

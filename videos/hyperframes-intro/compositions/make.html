@@ -1,0 +1,35 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"></head><body><template>
+<style>
+#root{position:absolute;inset:0;background:#142b25;color:#f6f3eb;font-family:'片头黑体'}
+#make-label{position:absolute;left:200px;top:134px;font-size:38px;font-weight:700;line-height:1.5;letter-spacing:3px}
+#make-rule{position:absolute;left:200px;top:230px;width:1520px;height:2px;background:#62736a}
+#make-line1{position:absolute;left:200px;top:300px;font-size:134px;font-weight:900;line-height:1.4;white-space:nowrap}
+#make-line2{position:absolute;left:200px;top:498px;font-size:150px;font-weight:900;line-height:1.4;letter-spacing:-4px;color:#ff956a;white-space:nowrap}
+#make-categories{position:absolute;left:212px;top:770px;font-size:40px;font-weight:400;line-height:1.5;color:#e4e9df}
+#make-symbol{position:absolute;left:1430px;top:398px;width:220px;height:220px}
+.make-tile{border-radius:50%;position:absolute;width:100px;height:100px;background:#ff956a}
+#make-a{left:0;top:0}#make-b{left:116px;top:0}#make-c{left:0;top:116px}#make-d{left:116px;top:116px}
+#make-outline{position:absolute;left:1398px;top:366px;width:280px;height:280px;border:2px solid #ff956a}
+</style><div id="root" data-composition-id="make" data-duration="3.8">
+<div id="make-all" class="clip" data-start="0" data-duration="3.8" data-track-index="0">
+<p id="make-label" data-var-text="brand">小玄子</p><div id="make-rule" data-layout-ignore></div>
+<h1 id="make-line1" data-var-text="hero1">用 AI</h1><h2 id="make-line2" data-var-text="hero2">做点真东西</h2>
+<p id="make-categories" data-var-text="categories">内容 · 产品 · 实战记录</p>
+<div id="make-outline" data-layout-ignore></div>
+<div id="make-symbol" data-layout-ignore><i id="make-a" class="make-tile"></i><i id="make-b" class="make-tile"></i><i id="make-c" class="make-tile"></i><i id="make-d" class="make-tile"></i></div>
+</div></div><script>
+const tl=gsap.timeline({paused:true});
+tl.fromTo("#make-line1",{opacity:0,x:34},{opacity:1,x:0,duration:0.55,ease:"power4.out"},0.12);
+tl.fromTo("#make-line2",{clipPath:"inset(0 100% 0 0)"},{clipPath:"inset(0 0% 0 0)",duration:0.65,ease:"power3.inOut"},0.55);
+tl.fromTo("#make-categories",{opacity:0},{opacity:1,duration:0.45,ease:"power2.out"},1.12);
+tl.fromTo("#make-outline",{scale:1.25,opacity:0},{scale:1,opacity:1,duration:0.65,ease:"power3.out"},0.5);
+tl.fromTo("#make-a",{x:0,y:0},{x:58,y:58,duration:0.65,ease:"power3.inOut"},1.8);
+tl.fromTo("#make-b",{x:0,y:0},{x:-58,y:58,duration:0.65,ease:"power3.inOut"},1.8);
+tl.fromTo("#make-c",{x:0,y:0},{x:58,y:-58,duration:0.65,ease:"power3.inOut"},1.8);
+tl.fromTo("#make-d",{x:0,y:0},{x:-58,y:-58,duration:0.65,ease:"power3.inOut"},1.8);
+tl.to("#make-outline",{scale:0.44,rotation:90,duration:0.65,ease:"power3.inOut"},1.8);
+tl.to("#make-line1",{opacity:0,duration:0.2},3.52);
+tl.to("#make-line2",{opacity:0,duration:0.2},3.52);
+tl.to("#make-categories",{opacity:0,duration:0.2},3.52);
+window.__timelines=window.__timelines||{};window.__timelines["make"]=tl;
+</script></template></body></html>
